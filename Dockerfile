@@ -46,4 +46,4 @@ COPY Caddyfile ./
 ENTRYPOINT ["multirun"]
 
 # Modify the CMD to start Keycloak and listen on the Railway-provided port
-CMD ["/opt/keycloak/bin/kc.sh", "start", "--optimized", "--import-realm", "caddy", "run", "2>&1", "-Djboss.http.port=${PORT}"]
+CMD ["/opt/keycloak/bin/kc.sh", "start", "--optimized", "--import-realm", "caddy", "run", "2>&1", "-Djboss.http.port=${PORT}", "-Djboss.bind.address=0.0.0.0:${PORT}"]
