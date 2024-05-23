@@ -27,6 +27,6 @@ ENV KC_DB=mysql
 ENV KC_DB_URL=mysql://root:aVEkQCvLGsyHdqMZHXgQLPiTkCttVYRV@monorail.proxy.rlwy.net:28728/railway
 ENV KC_DB_USERNAME=root
 ENV KC_DB_PASSWORD=aVEkQCvLGsyHdqMZHXgQLPiTkCttVYRV
-ENV KC_HOSTNAME=${{RAILWAY_PUBLIC_DOMAIN}}
+ENV KC_HOSTNAME=${RAILWAY_PUBLIC_DOMAIN}
 # Entry point
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
