@@ -8,5 +8,5 @@
 }
 
 :{$PORT} {
-	reverse_proxy http://keycloak-docker-file-production.up.railway.app:{$KC_HTTP_PORT}
+	reverse_proxy http://127.0.0.1:{$KC_HTTP_PORT}
 }
