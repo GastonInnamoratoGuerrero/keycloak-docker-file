@@ -22,6 +22,10 @@ WORKDIR /app
 
 COPY Caddyfile ./
 
+COPY vino-vivo-realm.json /tmp/vino-vivo-realm.json
+
+RUN /opt/keycloak/bin/kc.sh import /tmp/vino-vivo-realm.json
+
 ENTRYPOINT ["multirun"]
 
 CMD ["/opt/keycloak/bin/kc.sh start --optimized", "caddy run 2>&1"]
