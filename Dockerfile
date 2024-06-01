@@ -26,4 +26,4 @@ COPY vino-vivo-realm.json /opt/keycloak/data/import/vino-vivo-realm.json
 
 ENTRYPOINT ["multirun"]
 
-CMD ["/opt/keycloak/bin/kc.sh start --optimized", "caddy run 2>&1"]
+CMD ["/opt/keycloak/bin/kc.sh start --optimized --import-realm", "caddy run 2>&1"]
